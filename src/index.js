@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+let arra1 = [1,2,3];
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let [uno,dos,tres] = arra1;
+console.log(uno,dos,tres);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const imprimeArray = ([one,tow,three])=>{
+
+    return([
+        one,
+        tow,
+        three
+    ]);
+};
+
+console.log(imprimeArray(arra1)); 
