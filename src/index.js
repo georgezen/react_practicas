@@ -1,15 +1,21 @@
-let arra1 = [1,2,3];
+import { getId} from './import-export';
 
-let [uno,dos,tres] = arra1;
-console.log(uno,dos,tres);
+const promesa = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        const heroeById = getId(1);
+        if (typeof(heroeById)  === 'undefined') {
+            reject('No se encontro el heroe');
+        }else{
+            console.table(heroeById);
+            resolve(heroeById);
+        }
+    },2000);
+})
 
-const imprimeArray = ([one,tow,three])=>{
-
-    return([
-        one,
-        tow,
-        three
-    ]);
-};
-
-console.log(imprimeArray(arra1)); 
+promesa.then((heroe)=>{
+    console.log(`el heroe es ${heroe.name}`);
+    
+})
+.catch(
+    console.warn
+);
