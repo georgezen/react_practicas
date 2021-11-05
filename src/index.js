@@ -1,21 +1,15 @@
-import { getId} from './import-export';
+import {getPromise} from './9-promesas.js';
 
-const promesa = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        const heroeById = getId(1);
-        if (typeof(heroeById)  === 'undefined') {
-            reject('No se encontro el heroe');
-        }else{
-            console.table(heroeById);
-            resolve(heroeById);
-        }
-    },2000);
-})
+//console.log(getPromise(1));
 
-promesa.then((heroe)=>{
-    console.log(`el heroe es ${heroe.name}`);
+ const asincronia = async () => {
+    console.log( await getPromise(1));
+    console.log('hola');
+}
+
+asincronia();
+
+
+
+
     
-})
-.catch(
-    console.warn
-);
