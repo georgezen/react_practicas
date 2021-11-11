@@ -8,8 +8,8 @@ export const getPromise = (id) => {
             if (typeof(heroeById)  === 'undefined') {
                 reject('No se encontro el heroe');
             }else{
-                console.table(heroeById);
-                resolve(heroeById);
+                
+                resolve(heroeById.name);
             }
         },2000);
     })
@@ -18,7 +18,7 @@ export const getPromise = (id) => {
 
 getPromise().then((heroe)=>{
     console.log(`el heroe es ${heroe.name}`);
-    
+    return heroe;
 })
 .catch(
     console.warn
