@@ -1,5 +1,5 @@
 import {getPromise} from './9-promesas.js';
-
+import retorArray from './destrcut_array';
 //console.log(getPromise(1));
 
  const asincronia = async () => {
@@ -8,6 +8,12 @@ import {getPromise} from './9-promesas.js';
 }
 
 asincronia();
+
+
+
+const [a,b,c,d,funk] = retorArray('perra');
+console.log(a,b,c,d);
+funk(); 
 
 
 

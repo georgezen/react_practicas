@@ -13,3 +13,9 @@ const imprimeArray = ([one,tow,three])=>{
 };
 
 console.log(imprimeArray(arra1)); 
+
+const retorArray = (valor) => {
+    return [valor,2,3,4,()=>{console.log('hola')}];
+}
+
+export default retorArray;
